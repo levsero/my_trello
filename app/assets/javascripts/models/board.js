@@ -11,21 +11,6 @@ TrelloClone.Models.Board = Backbone.Model.extend ({
     return payload
   },
 
-// want to initiate each list model with it's corresponding cards collection 
-//   var listData = payload.lists;
-//   var listDist;
-//   if (listData) {
-//     var cardData = listData.cards;
-//     if(cardData) {
-//       delete listData.cardData;
-//     }
-//     this._lists().add(listData {cards: cardData});
-//     delete payload.list;
-//   }
-//   return payload
-// },
-
-
   _lists: function () {
   if (!this.lists){
      this.lists = new TrelloClone.Collections.Lists({board: this});
