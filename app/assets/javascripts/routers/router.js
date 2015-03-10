@@ -29,8 +29,9 @@ TrelloClone.Routers.Router = Backbone.Router.extend ({
   },
 
   _swapViews: function (view) {
-    this.currentView = this.currentView || view;
-    this.currentView.remove();
+    if (this.currentView) {
+      this.currentView.remove();
+    }
     this.currentView = view;
     this.$container.html(view.render().$el)
   }

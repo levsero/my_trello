@@ -14,4 +14,184 @@
  */
 
 @import "bootstrap";
-@import "font-awesome";
+// @import "font-awesome";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Index */
+
+.board-index {
+  // background: grey;
+  width: 150px;
+  float: left;
+  padding: 9px 12px;
+}
+
+.delete {
+  float: right;
+  font-size: 12px;
+  padding: 0 5px;
+  display: block;
+}
+
+.board-link {
+  display: block;
+  margin: 9px 0px;
+  padding:20px;
+  color: white;
+}
+
+.board-link:hover {
+  text-decoration: none;
+  background: #0E529D;
+  color: white;
+}
+
+.details {
+  display: block;
+  background: #0E74AF;
+  color: white;
+}
+
+// a.board-link {
+//   color: white;
+//   width: 130px;
+// }
+
+
+/* Index */
+
+.list {
+  width: 150px;
+  font-weight: 600;
+}
+
+li.board-show-list {
+  float: left;
+  display: block;
+  width: 150px;
+  background: #0E74AF;
+  color: white;
+  margin: 10px;
+  padding: 7px;
+}
+
+.list {
+  width: 100%;
+}
+
+strong {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-card {
+  float: right;
+  padding-right: 5px;
+  color: #888888;
+}
+
+.add-card:hover {
+  color: white;
+}
+
+.none {
+  display: none;
+}
+
+/* forms */
+input {
+  border: 1px solid black;
+  padding: 3px 5px;
+  background: #dddddd;
+}
+
+textarea {
+  border: 1px solid black;
+  padding: 3px 5px;
+  background: #dddddd;
+  margin: auto;
+  width: calc(100% - 10px);
+  color: black;
+}
+
+.right {
+  float: right;
+  padding-right: 3px;
+  color: red;
+}
+
+.add {
+  color: #70b500;
+  padding-left: 3px;
+}
+
+/* cards */
+
+edit:after {
+  content:"\270E";
+  float: right;
+  color: #aaaaaa;
+}
+
+edit:hover:after {
+  diplay: inline;
+  color: #666666;
+}
+
+li.card:hover{
+  color: blue;
+}
+
+li.card {
+  color: #70b500;
+  background: #cccccc;
+  padding: 5px;
+  margin: 5px 0;
+}

@@ -8,7 +8,6 @@ TrelloClone.Views.NewBoard = Backbone.View.extend ({
   },
 
   initialize: function () {
-
   },
 
   events: {
@@ -19,12 +18,12 @@ TrelloClone.Views.NewBoard = Backbone.View.extend ({
 
   createBoard: function (event) {
     event.preventDefault();
-    var attrs = $(event.currentTarget).serializeJSON()
+    var attrs = this.$el.serializeJSON()
     var board = new TrelloClone.Models.Board();
     board.save(attrs, {
       success: function () {
-        this.collection.add(board)
-        Backbone.history.navigate("boards/" + board.id, {trigger: true})
+        this.collection.add(board, { merge: true })
+        $(".add-board").toggleClass("none");
       }.bind(this)
     })
   }
